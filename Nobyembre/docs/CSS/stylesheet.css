@@ -1,0 +1,507 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Light background for empty spaces */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header #logo img {
+    height: 40px;
+    width: 60px;
+}
+
+nav button {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #0056b3;
+}
+
+/* Section Styling */
+.section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 1s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Home Section */
+#home-section {
+    position: relative;
+    overflow: hidden;
+}
+
+#intro {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-size: 1.5rem;
+    animation: slideIn 3s ease-in-out;
+}
+
+/* Video Container */
+#video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #f0f4f8; /* Background color for empty spaces */
+}
+
+/* Background Video */
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures video fits within the container without being cropped */
+    transform: translate(-50%, -50%); /* Centers the video */
+    z-index: 0;
+}
+
+/* Keyframes for Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Heart Talk Section */
+#heart-talk-section {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#heart-talk-container {
+    width: 100%;
+    padding: 20px;
+}
+
+#heart-talk-section h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#question-box {
+    background-color: #f4f6f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#mental-question {
+    font-size: 1.2rem;
+    color: #34495e;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Button Container */
+#button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#prev-button {
+    background-color: #e74c3c;
+}
+
+#prev-button:hover {
+    background-color: #c0392b;
+}
+
+/* About Section */
+#about-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#about-container {
+    width: 100%;
+    padding: 20px;
+}
+
+#about-section h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#about-section p {
+    font-size: 1rem;
+    color: #34495e;
+    line-height: 1.6;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    header #logo img {
+        height: 30px;
+        width: 50px;
+    }
+
+    nav button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    /* Adjustments for video */
+    #bg-video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    #heart-talk-section,
+    #about-section {
+        padding: 15px;
+        width: 90%;
+        max-width: none;
+    }
+
+    #heart-talk-section h2 {
+        font-size: 1.2rem;
+    }
+
+    #mental-question {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    #button-container {
+        gap: 5px;
+    }
+}
+
+/* Adjustments for smaller screens (mobile) */
+@media (max-width: 480px) {
+    #bg-video {
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Reducing font size */
+    #heart-talk-section h2 {
+        font-size: 1rem;
+    }
+
+    #mental-question {
+        font-size: 1rem;
+    }
+
+    nav button {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+
+    button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #121212; /* Dark background color */
+    color: #f5f5f5; /* Light text color */
+}
+
+body.dark-mode header {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode nav button {
+    background-color: #444; /* Dark button background */
+    color: #fff; /* Light text for buttons */
+}
+
+body.dark-mode nav button:hover {
+    background-color: #666; /* Slightly lighter button hover effect */
+}
+
+body.dark-mode #question-box {
+    background-color: #333; /* Dark background for question box */
+    color: #fff; /* Light text color */
+}
+
+body.dark-mode #about-section, 
+body.dark-mode #heart-talk-section {
+    background-color: #333; /* Dark background for sections */
+    color: #fff; /* Light text */
+}
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #f5f5f5; /* Light text */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition */
+}
+
+/* Header */
+body.dark-mode header {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent header */
+    color: #f5f5f5;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Navigation Buttons */
+body.dark-mode nav button {
+    background-color: #444;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode nav button:hover {
+    background-color: #666;
+}
+
+/* Question Box */
+body.dark-mode #heart-talk-section {
+    background-color: #222; /* Darker background for Heart Talk section */
+    color: #f5f5f5;
+    border: 1px solid #555; /* Optional border */
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.dark-mode #heart-talk-section h2 {
+    color: #ffa726; /* Highlighted text color for "Mental Health Questions" title */
+    text-shadow: 0 0 5px rgba(255, 165, 0, 0.5); /* Glow effect */
+}
+
+body.dark-mode #question-box {
+    background-color: #333;
+    color: #f5f5f5;
+    border: 1px solid #555;
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+}
+
+body.dark-mode #question-box:hover {
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.6); /* Subtle glow on hover */
+}
+
+/* About Section */
+body.dark-mode #about-section {
+    background-color: #222;
+    color: #f5f5f5;
+    border: 1px solid #444;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+body.dark-mode #about-section:hover {
+    transform: scale(1.02); /* Slight zoom-in effect on hover */
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.6); /* Glow effect */
+}
+
+body.dark-mode #about-section h2 {
+    color: #ffa726;
+    text-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+body.dark-mode #about-section p {
+    color: #e0e0e0; /* Slightly lighter text for readability */
+}
+
+/* Mental Question Text */
+body.dark-mode #mental-question {
+    color: #ffa726; /* Highlighted text */
+    transition: color 0.5s ease;
+}
+
+/* Button Container */
+body.dark-mode #button-container button {
+    background-color: #555;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode #button-container button:hover {
+    background-color: #777;
+}
+
+/* Smooth Transition for All Elements */
+* {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+/* Logo Styling */
+#logo img {
+    height: 40px;
+    width: 60px;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Hover Effect for Logo */
+#logo img:hover {
+    transform: scale(1.2) rotate(5deg); /* Slight zoom and rotation */
+    filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.6)); /* Glow effect */
+}
+
+/* Logo Effect for Dark Mode */
+body.dark-mode #logo img {
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.8)); /* Brighter glow in dark mode */
+    transition: filter 0.5s ease;
+}
+
+body.dark-mode #logo img:hover {
+    transform: scale(1.2) rotate(10deg); /* More pronounced rotation on hover in dark mode */
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 1)); /* Intense glow */
+}
+/* Owner Info Section */
+#owner-info {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#owner-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 40%; /* Circular photo */
+    border: 3px solid #007BFF; /* Blue border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#owner-photo:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+#owner-info p {
+    margin: 5px 0;
+    color: #34495e;
+    font-size: 1rem;
+}
+
+body.dark-mode #owner-photo {
+    border-color: #ffa726; /* Orange border in dark mode */
+}
+
+body.dark-mode #owner-info p {
+    color: #e0e0e0;
+}
+/* Lightbox Styling */
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: opacity 0.3s ease;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+#lightbox.hidden {
+    display: none;
+    opacity: 0;
+}
+
+#lightbox span {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#lightbox span:hover {
+    color: #ffa726;
+}

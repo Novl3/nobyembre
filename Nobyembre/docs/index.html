@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Journey</title>
+    <link rel="stylesheet" href="./CSS/stylesheet.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div id="logo">
+            <img src="./images/logo.jpg" alt="Logo">
+        </div>
+        <nav>
+            <button id="home-btn">Home</button>
+            <button id="heart-talk-btn">Heart Talk</button>
+            <button id="about-btn">About</button>
+            <button id="theme-toggle-btn">Dark Mode</button>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home-section" class="section">
+        <div id="video-container">
+            <!-- Single background video -->
+            <video id="bg-video" autoplay muted loop>
+                <source src="./videos/BG.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <!-- Heart Talk Section -->
+<section id="heart-talk-section" class="section hidden">
+    <div id="heart-talk-container">
+        <h2>Mental Health Questions</h2>
+        <!-- Introductory Prompt -->
+        <p id="prompt-message">Before we begin, take a moment to ask yourself: <strong>"Kumusta ka, yong totoo?"</strong></p>
+        <!-- Start Button -->
+        <button id="start-button">Start</button>
+        <div id="question-box" class="hidden">
+            <p id="mental-question">What brings you here today?</p>
+            <div id="button-container">
+                <button id="prev-button">Previous</button>
+                <button id="next-button">Next</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- About Section -->
+<section id="about-section" class="section hidden">
+    <div id="about-container">
+        <h2>About This Website</h2>
+        <p>"Kumusta ka, yong totoo? </p>
+            <p>This platform creates a safe space to explore mental well-being through heartfelt, conversational questions. Together, let's embrace openness, vulnerability, and growth."
+            This website is dedicated to mental health awareness. It provides a space for reflection, understanding, and support.</p>
+        <div id="owner-info">
+            <a href="./images/me5.jpg" id="photo-link">
+                <img id="owner-photo" src="./images/me5.jpg" alt="Virgilio Gervacio">
+            </a>
+            <p><strong>Virgilio Gervacio</strong></p>
+            <p>Creator</p>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox Overlay -->
+<div id="lightbox" class="hidden">
+    <span id="lightbox-close">&times;</span>
+    <img id="lightbox-image" src="./images/me5.jpg" alt="Enlarged Photo">
+</div>
+
+</section>
+
+    <script src="./JS/script.js"></script>
+</body>
+</html>
